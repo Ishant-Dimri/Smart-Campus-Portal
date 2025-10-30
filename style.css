@@ -218,3 +218,83 @@ body{
 
 /* subtle hover transitions */
 a, button, input, textarea{ transition:all 150ms ease }
+/* 🔹 About Page Specific Styles */
+.about-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.features {
+  margin-bottom: 60px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.feature-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.departments ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.departments li {
+  background: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.departments li:hover {
+  background: #003f88;
+}
+
+.vision {
+  background: #f2f6fc;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background: #002855;
+  color: white;
+  padding: 10px;
+  margin-top: 40px;
+}
+
