@@ -1,101 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Smart Campus Portal — Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <script defer src="chatbot.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Smart Campus Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <!-- simple SVG logo -->
-        <svg class="logo" width="36" height="36" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" ry="2" fill="currentColor"/></svg>
-        Smart Campus
-      </a>
-
-      <nav class="nav" id="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About / Services</a>
-        <a href="contact.html">Contact / Feedback</a>
-      </nav>
-
-      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
-    </div>
+  <!-- 🔹 Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Smart Campus</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero / Welcome Banner -->
-  <main>
-    <section class="hero container">
-      <div class="hero-left">
-        <h1>Welcome to <span class="accent">Smart Campus</span></h1>
-        <p class="lead">A connected, intuitive portal for students, faculty, and visitors — real-time info, lecture feedback, campus services and an assistant to help you navigate campus life.</p>
-        <div class="hero-cta">
-          <a class="btn" href="about.html">Explore Services</a>
-          <a class="btn ghost" href="contact.html">Get in touch</a>
+  <!-- 🔹 About Section -->
+  <main class="about-page">
+    <section class="intro-section">
+      <h1>About Our Smart Campus System</h1>
+      <p>
+        Our Smart Campus initiative transforms traditional college infrastructure into a 
+        connected, digital-first ecosystem that enhances learning, management, and collaboration. 
+        It aims to empower students, faculty, and administrators with technology-driven tools.
+      </p>
+    </section>
+
+    <!-- 🔹 Smart Features Section -->
+    <section class="features">
+      <h2>Smart Campus Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <img src="images/ai-assist.png" alt="AI Chatbot">
+          <h3>AI Chatbot Assistance</h3>
+          <p>
+            Get instant answers about classes, facilities, and events through our integrated 
+            chatbot — available 24/7 to guide students and visitors.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <img src="images/feedback.png" alt="Feedback System">
+          <h3>Per-Lecture Feedback</h3>
+          <p>
+            Students can provide real-time feedback for each lecture, helping faculty 
+            continuously improve their teaching approach.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <img src="images/iot-campus.png" alt="IoT Enabled Campus">
+          <h3>IoT-Enabled Infrastructure</h3>
+          <p>
+            Our campus integrates IoT devices to manage energy, attendance, and 
+            security — making every corner smart and efficient.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <img src="images/digital-library.png" alt="Digital Library">
+          <h3>Digital Library</h3>
+          <p>
+            Access thousands of e-books, research papers, and journals from anywhere 
+            on campus with our advanced e-library system.
+          </p>
         </div>
       </div>
-
-      <div class="hero-right">
-        <!-- Simple illustrative campus SVG -->
-        <svg class="campus-illu" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img">
-          <rect x="10" y="160" width="120" height="80" rx="6" fill="#e9f0ff"/>
-          <rect x="150" y="100" width="160" height="140" rx="8" fill="#edf7ea"/>
-          <rect x="330" y="80" width="240" height="160" rx="10" fill="#fff7e6"/>
-          <circle cx="80" cy="270" r="12" fill="#cfe8ff"/>
-          <circle cx="520" cy="260" r="10" fill="#ffd7a6"/>
-        </svg>
-      </div>
     </section>
 
-    <!-- Quick features grid -->
-    <section class="features container">
-      <article class="card">
-        <h3>Real-time Notices</h3>
-        <p>Important campus alerts, event schedules and academic announcements in one place.</p>
-      </article>
-      <article class="card">
-        <h3>Lecture Feedback</h3>
-        <p>Per-lecture feedback collection so instructors can iterate quickly.</p>
-      </article>
-      <article class="card">
-        <h3>Smart Assistant</h3>
-        <p>Floating chatbot answers FAQs about admissions, timetable, facilities and more.</p>
-      </article>
+    <!-- 🔹 Departments Section -->
+    <section class="departments">
+      <h2>Our Departments</h2>
+      <ul>
+        <li>Computer Science & Engineering</li>
+        <li>Electronics and Communication</li>
+        <li>Mechanical Engineering</li>
+        <li>Electrical Engineering</li>
+        <li>Civil Engineering</li>
+      </ul>
     </section>
 
-    <!-- Chatbot prompt + quick FAQ -->
-    <section class="container faq-wrap">
-      <div class="faq">
-        <h2>Common Questions</h2>
-        <ul>
-          <li onclick="openChatWith('How to apply for admission?')">How to apply for admission?</li>
-          <li onclick="openChatWith('Where is the timetable?')">Where is the timetable?</li>
-          <li onclick="openChatWith('Library hours')">Library hours</li>
-        </ul>
-      </div>
-
-      <div class="chat-invite card">
-        <h3>Need help right now?</h3>
-        <p>Click the floating assistant in bottom-right — it answers admissions, timetable, and facility questions instantly.</p>
-        <button class="btn" onclick="openChat()">Open Assistant</button>
-      </div>
+    <!-- 🔹 Vision Section -->
+    <section class="vision">
+      <h2>Our Vision</h2>
+      <p>
+        To create an eco-friendly, tech-empowered, and innovation-driven campus that 
+        supports modern education through digital collaboration and smart infrastructure.
+      </p>
     </section>
-
-    <!-- Footer quick contacts -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>© <strong>Smart Campus</strong> — Make campus smarter.</div>
-        <nav>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </footer>
   </main>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <p>© 2025 Smart Campus Portal | All Rights Reserved</p>
+  </footer>
+
+  <!-- 🔹 Chatbot -->
+  <script src="chatbot.js"></script>
 </body>
 </html>
