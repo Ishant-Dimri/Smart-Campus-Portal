@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Campus Portal — Contact & Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="logo" width="36" height="36" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" ry="2" fill="currentColor"/></svg>
+        Smart Campus
+      </a>
+
+      <nav class="nav" id="main-nav-3">
+        <a href="index.html">Home</a>
+        <a href="about.html">About / Services</a>
+        <a href="contact.html" class="active">Contact / Feedback</a>
+      </nav>
+
+      <button id="nav-toggle-3" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container contact-grid">
+      <div class="contact-card">
+        <h1>Contact Us</h1>
+        <p>Questions about admissions, campus visits or the smart services? Drop us a message.</p>
+        <p><strong>Address:</strong> 123 Campus Lane, Knowledge City</p>
+        <p><strong>Email:</strong> info@smartcampus.edu</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+
+        <form id="contact-form" class="form" onsubmit="return handleContactSubmit(event)">
+          <label>
+            Your name
+            <input type="text" name="name" id="contact-name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" id="contact-email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" id="contact-message" rows="4" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="feedback-card">
+        <h2>Per-Lecture Feedback</h2>
+        <p>Students can quickly give per-lecture feedback. This demo stores data locally (in-memory) — replace with server calls for production.</p>
+
+        <form id="feedback-form" class="form" onsubmit="return handleFeedbackSubmit(event)">
+          <label>
+            Student Name
+            <input type="text" id="fb-student" required />
+          </label>
+
+          <label>
+            Lecture Title / Code
+            <input type="text" id="fb-lecture" placeholder="e.g., CS101 - Data Structures" required />
+          </label>
+
+          <label>
+            Instructor
+            <input type="text" id="fb-instructor" required />
+          </label>
+
+          <label>
+            Rating (1-5)
+            <input type="number" id="fb-rating" min="1" max="5" value="5" required />
+          </label>
+
+          <label>
+            Comments (optional)
+            <textarea id="fb-comments" rows="4"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Submit Feedback</button>
+            <button type="button" class="btn ghost" onclick="resetFeedback()">Reset</button>
+          </div>
+
+          <p class="muted">Note: This demo saves feedback in-memory and shows a confirmation message. For persistent storage, connect to a backend or localStorage as needed.</p>
+        </form>
+
+        <div id="feedback-store" class="feedback-store">
+          <!-- feedback list will populate here -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <strong>Smart Campus</strong></div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

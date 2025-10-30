@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Campus Portal — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <!-- Top navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <!-- simple SVG logo -->
+        <svg class="logo" width="36" height="36" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" ry="2" fill="currentColor"/></svg>
+        Smart Campus
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About / Services</a>
+        <a href="contact.html">Contact / Feedback</a>
+      </nav>
+
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero / Welcome Banner -->
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>Welcome to <span class="accent">Smart Campus</span></h1>
+        <p class="lead">A connected, intuitive portal for students, faculty, and visitors — real-time info, lecture feedback, campus services and an assistant to help you navigate campus life.</p>
+        <div class="hero-cta">
+          <a class="btn" href="about.html">Explore Services</a>
+          <a class="btn ghost" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Simple illustrative campus SVG -->
+        <svg class="campus-illu" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img">
+          <rect x="10" y="160" width="120" height="80" rx="6" fill="#e9f0ff"/>
+          <rect x="150" y="100" width="160" height="140" rx="8" fill="#edf7ea"/>
+          <rect x="330" y="80" width="240" height="160" rx="10" fill="#fff7e6"/>
+          <circle cx="80" cy="270" r="12" fill="#cfe8ff"/>
+          <circle cx="520" cy="260" r="10" fill="#ffd7a6"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Quick features grid -->
+    <section class="features container">
+      <article class="card">
+        <h3>Real-time Notices</h3>
+        <p>Important campus alerts, event schedules and academic announcements in one place.</p>
+      </article>
+      <article class="card">
+        <h3>Lecture Feedback</h3>
+        <p>Per-lecture feedback collection so instructors can iterate quickly.</p>
+      </article>
+      <article class="card">
+        <h3>Smart Assistant</h3>
+        <p>Floating chatbot answers FAQs about admissions, timetable, facilities and more.</p>
+      </article>
+    </section>
+
+    <!-- Chatbot prompt + quick FAQ -->
+    <section class="container faq-wrap">
+      <div class="faq">
+        <h2>Common Questions</h2>
+        <ul>
+          <li onclick="openChatWith('How to apply for admission?')">How to apply for admission?</li>
+          <li onclick="openChatWith('Where is the timetable?')">Where is the timetable?</li>
+          <li onclick="openChatWith('Library hours')">Library hours</li>
+        </ul>
+      </div>
+
+      <div class="chat-invite card">
+        <h3>Need help right now?</h3>
+        <p>Click the floating assistant in bottom-right — it answers admissions, timetable, and facility questions instantly.</p>
+        <button class="btn" onclick="openChat()">Open Assistant</button>
+      </div>
+    </section>
+
+    <!-- Footer quick contacts -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <strong>Smart Campus</strong> — Make campus smarter.</div>
+        <nav>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
